@@ -1,5 +1,5 @@
 # MutantDnaValidate
-Es proyecto contine una lambda de aws con las siquientes capacidades en el handler
+Este proyecto contine una lambda de aws con las siquientes capacidades en el handler
 
 validar una cadena de DNA suminsitarda en un Strin[] para identificar si cumple con la condiciones para identificar aun mutante
 el string[] representa una matriz de nxn
@@ -12,7 +12,7 @@ condicion a evaluar :
 	
 el metodo responde json de la clase Response data con la siguiente informacion 
 
-	caso afirmativo (es mutante)
+caso afirmativo (es mutante)
 	
 		{
 			"statusCode": 200,
@@ -21,7 +21,7 @@ el metodo responde json de la clase Response data con la siguiente informacion
 			}
 		}
 		
-	caso negativo:NO es mutante
+caso negativo:NO es mutante
 	
 		{
 			"statusCode": 403,
@@ -34,8 +34,8 @@ el metodo responde json de la clase Response data con la siguiente informacion
 	id: valor int que se genera aleatoriamente
 	ismutant: campo tipo cadena con calor "true" o "false" segun el resultado de la validacion 
 		
-Esta fincionalida esta desplegada en en AWS mediante un metodo post en la siguiente url
+Esta funcionalida esta desplegada en en AWS mediante un metodo POST en la siguiente url
 
 https://g328gu1tgh.execute-api.us-east-1.amazonaws.com/qa/mutant
 
-en es repositorio encontar una coleccion de postman que te permitira realizar peticiones a la ruta de aws		
+En este repositorio encontarás el una colección de postman con el nombre mercadoLibreCollection que te permitirá realizar peticiones a la ruta de aws		
