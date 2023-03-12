@@ -1,0 +1,5 @@
+com\mercadolibre\MutantDnaValidateLambda.class
+com\mercadolibre\MutantTableDB.class
+com\mercadolibre\Dna$DnaBuilder.class
+com\mercadolibre\Dna.class
+com\mercadolibre\DnaValidateUseCase.class
