@@ -34,8 +34,8 @@ caso negativo:NO es mutante
 	id: valor int que se genera aleatoriamente
 	ismutant: campo tipo cadena con calor "true" o "false" segun el resultado de la validacion 
 		
-Esta funcionalida esta desplegada en en AWS mediante un metodo POST en la siguiente url
+**Esta funcionalidad esta desplegada en en AWS mediante un metodo GET en la siguiente url**
 
 https://g328gu1tgh.execute-api.us-east-1.amazonaws.com/qa/mutant
 
-En este repositorio encontarás el una colección de postman con el nombre mercadoLibreCollection que te permitirá realizar peticiones a la ruta de aws		
+En este repositorio encontarás  una colección de postman con el nombre **mercadoLibreCollection** que te permitirá realizar peticiones a la ruta de aws		

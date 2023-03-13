@@ -132,76 +132,76 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "aws-prueba con adn mutante",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dna\": [\"ATGCGA\",\"CAGTGC\",\"TTATGT\",\"AGAAGG\",\"CCCCTA\",\"TCACTT\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://g328gu1tgh.execute-api.us-east-1.amazonaws.com/qa/mutant",
+							"protocol": "https",
+							"host": [
+								"g328gu1tgh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"qa",
+								"mutant"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "aws-prueba con adn  NO mutante",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dna\": [\"PTGCGA\",\"CAGTGC\",\"TTATGT\",\"AGAAGG\",\"CCCCTA\",\"TCACTT\"]\r\n}"
+						},
+						"url": {
+							"raw": "https://g328gu1tgh.execute-api.us-east-1.amazonaws.com/qa/mutant",
+							"protocol": "https",
+							"host": [
+								"g328gu1tgh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"qa",
+								"mutant"
+							]
+						}
+					},
+					"response": []
 				}
 			]
-		},
-		{
-			"name": "aws-prueba con adn mutante",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"dna\": [\"ATGCGA\",\"CAGTGC\",\"TTATGT\",\"AGAAGG\",\"CCCCTA\",\"TCACTT\"]\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "https://g328gu1tgh.execute-api.us-east-1.amazonaws.com/qa/mutant",
-					"protocol": "https",
-					"host": [
-						"g328gu1tgh",
-						"execute-api",
-						"us-east-1",
-						"amazonaws",
-						"com"
-					],
-					"path": [
-						"qa",
-						"mutant"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "aws-prueba con adn  NO mutante",
-			"protocolProfileBehavior": {
-				"disabledSystemHeaders": {}
-			},
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"dna\": [\"PTGCGA\",\"CAGTGC\",\"TTATGT\",\"AGAAGG\",\"CCCCTA\",\"TCACTT\"]\r\n}"
-				},
-				"url": {
-					"raw": "https://g328gu1tgh.execute-api.us-east-1.amazonaws.com/qa/mutant",
-					"protocol": "https",
-					"host": [
-						"g328gu1tgh",
-						"execute-api",
-						"us-east-1",
-						"amazonaws",
-						"com"
-					],
-					"path": [
-						"qa",
-						"mutant"
-					]
-				}
-			},
-			"response": []
 		}
 	]
 }
