@@ -5,7 +5,6 @@ import java.util.Arrays;
 public class DnaValidateUseCase {
     public boolean isMutant(String[] dna){
         System.out.println("========   analizando DNA ==============");
-        if(validateInputData(dna)){
             String[][] matrix = convertArrayString2Matrix(dna);
             int vertical=findVertical(matrix);
             int horizontal=findHorizontal(matrix);
@@ -19,9 +18,6 @@ public class DnaValidateUseCase {
             }else {
                 return false;
             }
-        }else{
-            return false;
-        }
     }
 
     public  void printMatrix(String[][] matrix){

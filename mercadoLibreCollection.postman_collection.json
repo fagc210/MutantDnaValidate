@@ -52,6 +52,38 @@
 						],
 						"body": {
 							"mode": "raw",
+							"raw": "{\r\n    \"dna\": [\"TTGCGA\",\"CAGTGC\",\"TTATGT\",\"AGAATG\",\"CCCCTA\",\"TCACTT\"]\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/mutant/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mutant",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "prueba datainput no valida",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
 							"raw": "{\r\n    \"dna\": [\"PTGCGA\",\"CAGTGC\",\"TTATGT\",\"AGAAGG\",\"CCCCTA\",\"TCACTT\"]\r\n}"
 						},
 						"url": {
@@ -167,6 +199,42 @@
 				},
 				{
 					"name": "aws-prueba con adn  NO mutante",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dna\": [\"TTGCGA\",\"CAGTGC\",\"TTATGT\",\"AGAATG\",\"CCCCTA\",\"TCACTT\"]\r\n}"
+						},
+						"url": {
+							"raw": "https://g328gu1tgh.execute-api.us-east-1.amazonaws.com/qa/mutant",
+							"protocol": "https",
+							"host": [
+								"g328gu1tgh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"qa",
+								"mutant"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "prueba datainput no valida",
 					"protocolProfileBehavior": {
 						"disabledSystemHeaders": {}
 					},

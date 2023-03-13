@@ -17,7 +17,7 @@ caso afirmativo (es mutante)
 		{
 			"statusCode": 200,
 			"body": {
-				"message": "todo bien"
+				"message": "DNA Mutante"
 			}
 		}
 		
@@ -26,9 +26,19 @@ caso negativo:NO es mutante
 		{
 			"statusCode": 403,
 			"body": {
-				"message": "error"
+				"message": "DNA Humano"
 			}
 		}
+		
+error en los datos de entrada
+
+		{
+			"statusCode": 403,
+			"body": {
+				"message": "error dataInput"
+			}
+		}
+		
 		
 2.  Por cada cadena de DNA analizada se agraga un registo a una tabla en Dynamodb con los siguientes datos
 	id: valor int que se genera aleatoriamente

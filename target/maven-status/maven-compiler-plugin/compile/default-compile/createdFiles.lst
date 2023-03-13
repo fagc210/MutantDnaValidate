@@ -1,0 +1,9 @@
+com\mercadolibre\MutantDnaValidateLambda.class
+com\mercadolibre\Dna.class
+com\mercadolibre\DnaValidateUseCase.class
+com\mercadolibre\BodyResponse.class
+com\mercadolibre\ResponseData$ResponseDataBuilder.class
+com\mercadolibre\MutantTableDB.class
+com\mercadolibre\Dna$DnaBuilder.class
+com\mercadolibre\BodyResponse$BodyResponseBuilder.class
+com\mercadolibre\ResponseData.class

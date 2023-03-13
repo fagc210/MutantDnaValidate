@@ -18,25 +18,32 @@ public class MutantDnaValidateLambda implements RequestHandler<Dna,ResponseData>
         DynamoDBMapper mapper = new DynamoDBMapper(amazonDynamoDB);
         context.getLogger().log("DNA:"+dna);
         DnaValidateUseCase dnaValidateUseCase = new DnaValidateUseCase();
-        boolean isMutant = dnaValidateUseCase.isMutant(dna.getDna());
-        if(isMutant){
-            MutantTableDB mutantTableDB = new MutantTableDB();
-            mutantTableDB.setId(String.valueOf((int)(Math.random()*1000+1)));
-            mutantTableDB.setIsmutant("true");
-            mapper.save(mutantTableDB);
-            return ResponseData.builder()
-                    .statusCode(200).body(BodyResponse.builder()
-                            .message("todo bien").build()).build();
+        if(dnaValidateUseCase.validateInputData(dna.getDna())){
+            boolean isMutant = dnaValidateUseCase.isMutant(dna.getDna());
+            if(isMutant){
+                MutantTableDB mutantTableDB = new MutantTableDB();
+                mutantTableDB.setId(String.valueOf((int)(Math.random()*1000+1)));
+                mutantTableDB.setIsmutant("true");
+                mapper.save(mutantTableDB);
+                return ResponseData.builder()
+                        .statusCode(200).body(BodyResponse.builder()
+                                .message("DNA Mutante").build()).build();
 
-        }else{
-            MutantTableDB mutantTableDB = new MutantTableDB();
-            mutantTableDB.setId(String.valueOf((int)(Math.random()*1000+1)));
-            mutantTableDB.setIsmutant("false");
-            mapper.save(mutantTableDB);
+            }else{
+                MutantTableDB mutantTableDB = new MutantTableDB();
+                mutantTableDB.setId(String.valueOf((int)(Math.random()*1000+1)));
+                mutantTableDB.setIsmutant("false");
+                mapper.save(mutantTableDB);
+                return ResponseData.builder()
+                        .statusCode(403).body(BodyResponse.builder()
+                                .message("DNA Humano").build()).build();
+            }
+        }else {
             return ResponseData.builder()
                     .statusCode(403).body(BodyResponse.builder()
-                            .message("error").build()).build();
+                            .message("error dataInput").build()).build();
         }
+
     }
 
     private void initDynamoDbClient() {
