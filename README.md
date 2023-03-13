@@ -41,7 +41,9 @@ error en los datos de entrada
 		
 		
 2.  Por cada cadena de DNA analizada se agraga un registo a una tabla en Dynamodb con los siguientes datos
+
 	id: valor int que se genera aleatoriamente
+	
 	ismutant: campo tipo cadena con calor "true" o "false" segun el resultado de la validacion 
 		
 **Esta funcionalidad esta desplegada en en AWS mediante un metodo GET en la siguiente url**
